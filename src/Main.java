@@ -3,6 +3,5 @@ public class Main {
 
         Database database = new Database(1);
         database.runDatabase();
-
     }
 }
