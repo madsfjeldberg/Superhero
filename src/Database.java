@@ -2,14 +2,17 @@ import java.util.Scanner;
 
 public class Database {
 
+    // attributer
     private final Superhero[] list;
     private int size;
 
+    // konstruktør
     public Database(int cap) {
         list = new Superhero[cap];
         size = 0;
     }
 
+    // tilføj superhelte til database
     public void addSuperhero() {
         Scanner input = new Scanner(System.in);
 
@@ -47,6 +50,7 @@ public class Database {
         }
     }
 
+    // print database menu
     public void databaseMenu() {
         System.out.println("Velkommen til SUPERHERO UNIVERSET.");
         System.out.print("─".repeat(33) + "\n");
@@ -55,6 +59,7 @@ public class Database {
         System.out.print("> ");
     }
 
+    // kører databasen
     public void runDatabase() {
         Scanner input = new Scanner(System.in);
         boolean run = true;

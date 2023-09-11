@@ -18,6 +18,7 @@ public class Superhero {
         this.strength = strength;
     }
 
+    // get og set metoder til senere brug
     public void setName(String name) {
         this.name = name;
     }

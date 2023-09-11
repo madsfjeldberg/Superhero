@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        Database database = new Database(1);
+        // init database med plads til 5 superhelte
+        Database database = new Database(5);
         database.runDatabase();
     }
 }
