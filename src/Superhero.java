@@ -5,11 +5,11 @@ public class Superhero {
     private String realName;
     private String superPower;
     private int yearCreated;
-    private boolean isHuman;
+    private String isHuman;
     private int strength;
 
     // konstruktør
-    public Superhero(String name, String realName, String superPower, int yearCreated, boolean isHuman, int strength) {
+    public Superhero(String name, String realName, String superPower, int yearCreated, String isHuman, int strength) {
         this.name = name;
         this.realName = realName;
         this.superPower = superPower;
@@ -35,7 +35,7 @@ public class Superhero {
         this.yearCreated = yearCreated;
     }
 
-    public void setHuman(boolean human) {
+    public void setHuman(String human) {
         isHuman = human;
     }
 
@@ -59,7 +59,7 @@ public class Superhero {
         return yearCreated;
     }
 
-    public boolean isHuman() {
+    public String isHuman() {
         return isHuman;
     }
 
