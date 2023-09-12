@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Database {
 
-    // attributer
+    // attributes
     private final ArrayList<Superhero> heroList;
     private int size;
     private final int maxSize;
@@ -15,10 +15,12 @@ public class Database {
         maxSize = 10;
 
         // temp superhelte for testing
+        /*
         Superhero superhero = new Superhero("Batman", "Bruce Wayne", "Money", 1980, "JA", 200);
         Superhero superhero1 = new Superhero("Superman", "Clark Kent", "Flight", 1990, "NEJ", 2000);
         heroList.add(superhero);
         heroList.add(superhero1);
+        */
     }
 
     // tilføj superhelte til database
@@ -48,7 +50,7 @@ public class Database {
             
             System.out.print("\nEr superhelten et menneske? [y/n]: ");
             String svar = input.next();
-            String isHuman = "";
+            String isHuman;
             while (!svar.equals("y") && !svar.equals("n")) {
                 System.out.println("Ugyldigt svar.");
             }

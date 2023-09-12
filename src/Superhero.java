@@ -1,6 +1,6 @@
 public class Superhero {
 
-    // attributer
+    // attributes
     private String name;
     private String realName;
     private String superPower;
