@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="4. commit, en helvedes masse tilføjelser.&#10;mangler user story #8.">
+    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="Funktionelt færdig program. finpudsning til følge.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
     </list>
@@ -70,7 +70,7 @@
       <workItem from="1694431789278" duration="80000" />
       <workItem from="1694436210920" duration="529000" />
       <workItem from="1694437199658" duration="1853000" />
-      <workItem from="1694439101194" duration="15700000" />
+      <workItem from="1694439101194" duration="18059000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -120,7 +120,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694520635631</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Funktionelt færdig program. finpudsning til følge.">
+      <option name="closed" value="true" />
+      <created>1694523703160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694523703160</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Funktionelt færdig program. finpudsning til følge.">
+      <option name="closed" value="true" />
+      <created>1694523852976</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694523852976</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +147,7 @@
     <MESSAGE value="2. commit, delopgave 1 færdig. &#10;Menu og tilføjelse af superhelt." />
     <MESSAGE value="3. commit, kommentarer tilføjet." />
     <MESSAGE value="4. commit, en helvedes masse tilføjelser.&#10;mangler user story #8." />
-    <option name="LAST_COMMIT_MESSAGE" value="4. commit, en helvedes masse tilføjelser.&#10;mangler user story #8." />
+    <MESSAGE value="Funktionelt færdig program. finpudsning til følge." />
+    <option name="LAST_COMMIT_MESSAGE" value="Funktionelt færdig program. finpudsning til følge." />
   </component>
 </project>

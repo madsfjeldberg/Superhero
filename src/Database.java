@@ -15,12 +15,12 @@ public class Database {
         maxSize = 10;
 
         // temp superhelte for testing
-        /*
         Superhero superhero = new Superhero("Batman", "Bruce Wayne", "Money", 1980, "JA", 200);
         Superhero superhero1 = new Superhero("Superman", "Clark Kent", "Flight", 1990, "NEJ", 2000);
+        Superhero superhero2 = new Superhero("Martian", "Jon", "Flight, Strength", 2000, "NEJ", 500);
         heroList.add(superhero);
         heroList.add(superhero1);
-        */
+        heroList.add(superhero2);
     }
 
     // tilføj superhelte til database
@@ -106,9 +106,8 @@ public class Database {
         }
 
         if (chosenSuperhero != null) {
-            System.out.print("Hvad vil du ændre?: ");
-            System.out.println();
             String valueMessage = "Indtast ny værdi: ";
+            System.out.print("Hvad vil du ændre?: ");
             System.out.println();
             switch (input.nextInt()) {
                 case 1 -> {
@@ -144,20 +143,8 @@ public class Database {
 
     }
 
-    // print database menu
-    // kan nemt ændres efter behov
-    public void databaseMenu() {
-        System.out.println("Velkommen til SUPERHERO UNIVERSET.");
-        System.out.print("─".repeat(33) + "\n");
-        System.out.println("1. Opret superhelt");
-        System.out.println("2. Vis liste");
-        System.out.println("3. Søg efter superhelt");
-        System.out.println("4. Rediger superhelt");
-        System.out.println("9. Afslut");
-        System.out.print("> ");
-    }
-
     // søge metode
+    // break efter den finder første resultat der passer
     public void search() {
         Scanner input = new Scanner(System.in);
         System.out.println("Søg efter superhelt: ");
@@ -166,6 +153,7 @@ public class Database {
             if (i.getName().toLowerCase().contains(search.toLowerCase()) ||
                     i.getRealName().toLowerCase().contains(search.toLowerCase())) {
                 showInfo(i);
+                break;
             }
         }
     }
@@ -179,13 +167,44 @@ public class Database {
         }
     }
 
+    // slet metode
+    public void delete() {
+        Scanner input = new Scanner(System.in);
+        int index = 1;
+        System.out.println();
+        for (Superhero i: heroList) {
+            System.out.println(index++ + ". " + i.getName());
+        }
+        System.out.print("Hvem skal slettes fra databasen?");
+        int choice = input.nextInt();
+        heroList.remove(choice - 1);
+        System.out.println("\nSletter fra database...");
+        System.out.println("Superhelt slettet.\n");
+        }
+
+    // database menu
+    // kan nemt ændres efter behov
+    public void databaseMenu() {
+        System.out.print("─".repeat(33) + "\n");
+        System.out.println("MENU");
+        System.out.print("─".repeat(33) + "\n");
+        System.out.println("1. Opret superhelt");
+        System.out.println("2. Vis liste");
+        System.out.println("3. Søg efter superhelt");
+        System.out.println("4. Rediger superhelt");
+        System.out.println("5. Slet en superhelt");
+        System.out.println("9. Afslut");
+        System.out.print("> ");
+    }
+
     // kører databasen
-    //switch bruges til at vælge mellem muligheder i menu
+    // switch bruges til at vælge mellem muligheder i menu
     public void runDatabase() {
         Scanner input = new Scanner(System.in);
         boolean run = true;
         int choice;
 
+        System.out.println("Velkommen til SUPERHERO UNIVERSET.");
         do {
             databaseMenu();
             choice = input.nextInt();
@@ -194,6 +213,7 @@ public class Database {
                 case 2 -> showList();
                 case 3 -> search();
                 case 4 -> edit();
+                case 5 -> delete();
                 case 9 -> run = false;
                 default -> System.out.println("\nUgyldigt input.\n");
             }
