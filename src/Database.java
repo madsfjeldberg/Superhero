@@ -15,8 +15,8 @@ public class Database {
         maxSize = 10;
 
         // temp superhelte for testing
-        Superhero superhero = new Superhero("Batman", "Bruce Wayne", "Money", 1980, "y", 200);
-        Superhero superhero1 = new Superhero("Superman", "Clark Kent", "Flight", 1990, "n", 2000);
+        Superhero superhero = new Superhero("Batman", "Bruce Wayne", "Money", 1980, "JA", 200);
+        Superhero superhero1 = new Superhero("Superman", "Clark Kent", "Flight", 1990, "NEJ", 2000);
         heroList.add(superhero);
         heroList.add(superhero1);
     }
@@ -40,15 +40,27 @@ public class Database {
             String superPower = input.nextLine();
 
             System.out.print("\nÅrstal for skabelse: ");
+            while (!input.hasNextInt()) {
+                System.out.println("Du skal indtaste et tal.");
+                input.next();
+            }
             int yearCreated = input.nextInt();
-
+            
             System.out.print("\nEr superhelten et menneske? [y/n]: ");
-            String isHuman;
-            if (input.next().equals("y")) {
+            String svar = input.next();
+            String isHuman = "";
+            while (!svar.equals("y") && !svar.equals("n")) {
+                System.out.println("Ugyldigt svar.");
+            }
+            if (svar.equals("y")) {
                 isHuman = "JA";
             } else { isHuman = "NEJ"; }
 
             System.out.print("\nStyrke: ");
+            while (!input.hasNextInt()) {
+                System.out.println("Du skal indtaste et tal.");
+                input.next();
+            }
             int strength = input.nextInt();
             System.out.println();
 
@@ -61,6 +73,7 @@ public class Database {
         }
     }
 
+    // info metode som kaldes fra andre metoder
     public void showInfo(Superhero superhero) {
         System.out.printf("1. Superheltenavn: %s\n", superhero.getName());
         System.out.printf("2. Virkeligt navn: %s\n", superhero.getRealName());
@@ -71,6 +84,7 @@ public class Database {
         System.out.println();
     }
 
+    // rediger metode
     public void edit() {
         Scanner input = new Scanner(System.in);
         System.out.println("Superhelte i database:");
@@ -88,37 +102,44 @@ public class Database {
                 chosenSuperhero = i;
             }
         }
-        System.out.println("Hvad vil du ændre?");
 
-        String valueMessage = "Indtast ny værdi:";
-        switch (input.nextInt()) {
-            case 1 -> {
-                System.out.print(valueMessage);
-                chosenSuperhero.setName(input.nextLine());
+        if (chosenSuperhero != null) {
+            System.out.print("Hvad vil du ændre?: ");
+            System.out.println();
+            String valueMessage = "Indtast ny værdi: ";
+            System.out.println();
+            switch (input.nextInt()) {
+                case 1 -> {
+                    System.out.print(valueMessage);
+                    chosenSuperhero.setName(input.nextLine());
+                }
+                case 2 -> {
+                    System.out.print(valueMessage);
+                    chosenSuperhero.setRealName(input.nextLine());
+                }
+                case 3 -> {
+                    System.out.print(valueMessage);
+                    chosenSuperhero.setSuperPower(input.nextLine());
+                }
+                case 4 -> {
+                    System.out.println(valueMessage);
+                    chosenSuperhero.setYearCreated(input.nextInt());
+                }
+                case 5 -> {
+                    System.out.println(valueMessage);
+                    chosenSuperhero.setHuman(input.nextLine());
+                }
+                case 6 -> {
+                    System.out.println(valueMessage);
+                    chosenSuperhero.setStrength(input.nextInt());
+                }
+                default -> System.out.println("Ugyldigt svar.");
             }
-            case 2 -> {
-                System.out.print(valueMessage);
-                chosenSuperhero.setRealName(input.nextLine());
-            }
-            case 3 -> {
-                System.out.print(valueMessage);
-                chosenSuperhero.setSuperPower(input.nextLine());
-            }
-            case 4 -> {
-                System.out.println(valueMessage);
-                chosenSuperhero.setYearCreated(input.nextInt());
-            }
-            case 5 -> {
-                System.out.println(valueMessage);
-                chosenSuperhero.setHuman(input.nextLine());
-            }
-            case 6 -> {
-                System.out.println(valueMessage);
-                chosenSuperhero.setStrength(input.nextInt());
-            }
-            default -> System.out.println("Ugyldigt svar.");
+            showInfo(chosenSuperhero);
+        } else {
+            System.out.println("Superhelt ikke fundet.");
         }
-        showInfo(chosenSuperhero);
+
     }
 
     // print database menu
@@ -134,6 +155,7 @@ public class Database {
         System.out.print("> ");
     }
 
+    // søge metode
     public void search() {
         Scanner input = new Scanner(System.in);
         System.out.println("Søg efter superhelt: ");
@@ -146,6 +168,7 @@ public class Database {
         }
     }
 
+    // liste metode
     public void showList() {
         System.out.println("Liste af superhelte:");
         System.out.println();
@@ -170,7 +193,7 @@ public class Database {
                 case 3 -> search();
                 case 4 -> edit();
                 case 9 -> run = false;
-                default -> System.out.println("\nForkert input.\n");
+                default -> System.out.println("\nUgyldigt input.\n");
             }
         } while (run);
     }
