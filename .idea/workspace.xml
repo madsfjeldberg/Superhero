@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="Funktionelt færdig program. finpudsning til følge.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="Tilføjet search method diagram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;madsfjeldberg&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="db46a39a-990e-4678-9639-5f1a8da51fe0" />
+        <option name="url" value="https://github.com/madsfjeldberg/Superhero.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -82,6 +96,8 @@
       <workItem from="1694670976056" duration="516000" />
       <workItem from="1694672947367" duration="982000" />
       <workItem from="1694676138182" duration="63000" />
+      <workItem from="1694676424537" duration="2078000" />
+      <workItem from="1694678571783" duration="2346000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -147,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694523852976</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Tilføjet search method diagram.">
+      <option name="closed" value="true" />
+      <created>1694676482947</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694676482947</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +183,7 @@
     <MESSAGE value="3. commit, kommentarer tilføjet." />
     <MESSAGE value="4. commit, en helvedes masse tilføjelser.&#10;mangler user story #8." />
     <MESSAGE value="Funktionelt færdig program. finpudsning til følge." />
-    <option name="LAST_COMMIT_MESSAGE" value="Funktionelt færdig program. finpudsning til følge." />
+    <MESSAGE value="Tilføjet search method diagram." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet search method diagram." />
   </component>
 </project>
