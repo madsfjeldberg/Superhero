@@ -195,7 +195,6 @@ public class Database {
         Scanner input = new Scanner(System.in);
         boolean run = true;
         int choice;
-
         System.out.println("Velkommen til SUPERHERO UNIVERSET.");
         do {
             databaseMenu();
