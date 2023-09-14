@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="Funktionelt færdig program. finpudsning til følge.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
     </list>
@@ -38,10 +39,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/madsfjeldberg/Library/CloudStorage/GoogleDrive-madsfjelle@gmail.com/My Drive/KEA - 1. Semester/Programmering/Superhero&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -71,6 +74,14 @@
       <workItem from="1694436210920" duration="529000" />
       <workItem from="1694437199658" duration="1853000" />
       <workItem from="1694439101194" duration="18059000" />
+      <workItem from="1694584084340" duration="597000" />
+      <workItem from="1694586735092" duration="254000" />
+      <workItem from="1694595281370" duration="42000" />
+      <workItem from="1694642893235" duration="231000" />
+      <workItem from="1694643675488" duration="743000" />
+      <workItem from="1694670976056" duration="516000" />
+      <workItem from="1694672947367" duration="982000" />
+      <workItem from="1694676138182" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />

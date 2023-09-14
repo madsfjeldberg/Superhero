@@ -149,12 +149,17 @@ public class Database {
         Scanner input = new Scanner(System.in);
         System.out.println("Søg efter superhelt: ");
         String search = input.nextLine();
+        boolean found = false;
         for (Superhero i : heroList) {
             if (i.getName().toLowerCase().contains(search.toLowerCase()) ||
                     i.getRealName().toLowerCase().contains(search.toLowerCase())) {
                 showInfo(i);
+                found = true;
                 break;
             }
+        }
+        if (!found) {
+            System.out.println("Superhelt ikke fundet.");
         }
     }
 
@@ -175,7 +180,7 @@ public class Database {
         for (Superhero i: heroList) {
             System.out.println(index++ + ". " + i.getName());
         }
-        System.out.print("Hvem skal slettes fra databasen?");
+        System.out.print("Hvem skal slettes fra databasen?: ");
         int choice = input.nextInt();
         heroList.remove(choice - 1);
         System.out.println("\nSletter fra database...");
