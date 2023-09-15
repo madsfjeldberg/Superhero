@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // attributes
@@ -74,10 +75,6 @@ public class UserInterface {
                     i.getRealName().toLowerCase().contains(search.toLowerCase())) {
                 showInfo(i);
                 found = true;
-
-                // fjernet break, så metoden returner alle superhelte der matcher
-                // søgekriterie
-                // break;
             }
         }
         if (!found) System.out.println("Superhelt ikke fundet.");
@@ -85,6 +82,7 @@ public class UserInterface {
 
     // redigerer en superhelt
     public void edit() {
+        ArrayList<Superhero> foundSuperheroes = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         System.out.println("Superhelte i database:");
         for (Superhero i: db.heroList) System.out.println(i.getName());
@@ -96,9 +94,27 @@ public class UserInterface {
         for (Superhero i : db.heroList) {
             if (i.getName().toLowerCase().contains(search.toLowerCase()) ||
                     i.getRealName().toLowerCase().contains(search.toLowerCase())) {
-                showInfo(i);
-                chosenSuperhero = i;
+                foundSuperheroes.add(i);
             }
+        }
+
+        int index = 1;
+        for (Superhero i : foundSuperheroes) {
+            System.out.println(index + ". " + i.getName());
+            index++;
+        }
+        System.out.print("Vælg en superhelt: ");
+        System.out.println();
+
+        while (!input.hasNextInt()) {
+            System.out.println("Du skal indtaste et tal.");
+            input.next();
+        }
+        int chosenIndex = input.nextInt();
+        System.out.println();
+        if (chosenIndex > 0 && chosenIndex <= foundSuperheroes.size()) {
+            chosenSuperhero = foundSuperheroes.get(chosenIndex - 1);
+            showInfo(chosenSuperhero);
         }
 
         if (chosenSuperhero != null) {

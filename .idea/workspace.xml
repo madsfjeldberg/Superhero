@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="simplificering af et par if/else sætninger.">
-      <change afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+    <list default="true" id="19123b89-87d3-42fc-b2b1-65f5f25088b0" name="Changes" comment="Oprettet UserInterface, rykket alle metoder dertil.&#10;Fjernet Scanner kald i hver metode, oprettet i konstruktør.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <workItem from="1694678571783" duration="3309000" />
       <workItem from="1694684136381" duration="796000" />
       <workItem from="1694693764382" duration="5989000" />
-      <workItem from="1694765097538" duration="472000" />
+      <workItem from="1694765097538" duration="2637000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -191,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694684171993</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Oprettet UserInterface, rykket alle metoder dertil.&#10;Fjernet Scanner kald i hver metode, oprettet i konstruktør.">
+      <option name="closed" value="true" />
+      <created>1694765857311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694765857311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +222,7 @@
     <MESSAGE value="Funktionelt færdig program. finpudsning til følge." />
     <MESSAGE value="Tilføjet search method diagram." />
     <MESSAGE value="simplificering af et par if/else sætninger." />
-    <option name="LAST_COMMIT_MESSAGE" value="simplificering af et par if/else sætninger." />
+    <MESSAGE value="Oprettet UserInterface, rykket alle metoder dertil.&#10;Fjernet Scanner kald i hver metode, oprettet i konstruktør." />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprettet UserInterface, rykket alle metoder dertil.&#10;Fjernet Scanner kald i hver metode, oprettet i konstruktør." />
   </component>
 </project>
