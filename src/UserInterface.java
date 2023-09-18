@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 // attributes
 public class UserInterface {
@@ -12,6 +14,13 @@ public class UserInterface {
         input = new Scanner(System.in);
     }
 
+    // tjekker om der er tal eller symboler i et string request
+    public boolean stringTester(String string) {
+        Pattern pattern = Pattern.compile("^[A-Za-z]+$");
+        Matcher matcher = pattern.matcher(string);
+        return matcher.find();
+    }
+
     // tilføj superhelt til database
     public void addSuperhero() {
         if (db.size < db.maxSize) {
@@ -21,12 +30,24 @@ public class UserInterface {
             if  (name.equals("n")) {
                 name = "";
             }
+            while (!stringTester(name)) {
+                System.out.println("Du skal indtaste et gyldigt navn.");
+                name = input.nextLine();
+            }
 
             System.out.print("\nRigtige navn: ");
             String realName = input.nextLine();
+            while (!stringTester(realName)) {
+                System.out.println("Du skal indtaste et gyldigt navn.");
+                name = input.nextLine();
+            }
 
             System.out.print("\nSuperkræft: ");
             String superPower = input.nextLine();
+            while (!stringTester(superPower)) {
+                System.out.println("Du skal indtaste en gyldig superkræft.");
+                name = input.nextLine();
+            }
 
             System.out.print("\nÅrstal for skabelse: ");
             while (!input.hasNextInt()) {
@@ -79,6 +100,7 @@ public class UserInterface {
         }
         if (!found) System.out.println("Superhelt ikke fundet.");
     }
+
 
     // redigerer en superhelt
     public void edit() {
@@ -164,10 +186,22 @@ public class UserInterface {
             System.out.println(index++ + ". " + i.getName());
         }
         System.out.print("Hvem skal slettes fra databasen?: ");
-        int choice = input.nextInt();
-        db.heroList.remove(choice - 1);
-        System.out.println("\nSletter fra database...");
-        System.out.println("Superhelt slettet.\n");
+        while (true) {
+            if (!input.hasNextInt()) {
+                System.out.println("Du skal indtaste et tal.");
+                input.next();
+            } else {
+                int choice = input.nextInt();
+                if (choice >= 1 && choice <= db.heroList.size()) {
+                    db.heroList.remove(choice - 1);
+                    System.out.println("\nSletter fra database...");
+                    System.out.println("Superhelt slettet.\n");
+                    break;
+                } else {
+                    System.out.println("Du skal indtaste gyldigt tal mellem 1 og " + db.heroList.size() + ".");
+                }
+            }
+        }
     }
 
     // viser database menu
